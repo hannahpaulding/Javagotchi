@@ -90,6 +90,13 @@ public class Creature
         {
             s += "Aw, " + this.getName() + "is a little hungry!\n";
         }
+
+        if ((happiness == 0) || (energy == 0) || (fullness == 0))
+        {
+            p("Oh no! " + this.getName() + "has died :( You're a terrible owner");
+            System.exit(0);
+        }
+
         return s;
     }
 
